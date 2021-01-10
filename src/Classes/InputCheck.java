@@ -1,5 +1,7 @@
 package Classes;
 
+import java.io.IOException;
+
 public class InputCheck {
 
     static boolean isArab;
@@ -39,7 +41,7 @@ public class InputCheck {
         }
     }
 
-    public static void stringToElements(String input) throws Exception {
+    public static void stringToElements(String input) {
         try {
             if (input.contains("+")) {
                 String[] args = temp.split("\\+", 2);
@@ -70,9 +72,9 @@ public class InputCheck {
                 isArab();
                 inputCheck(xTemp, yTemp);
             } else {
-                throw new Exception("Ошибка ввода");
+                throw new IOException("Ошибка ввода");
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.exit(666);
         }
     }
