@@ -33,10 +33,11 @@ public class Calculator {
     }
 
     public void divide(int x, int y) {
-        divideResult =(double) x / y;
         if (InputCheck.isArab) {
+            divideResult =(double) x / y;
             ArabOutput.printArabResult(divideResult);
         } else {
+            result = x / y;
             RomanOutput.printRomanResult(ResultToRoman.resultToRoman(result));
         }
     }
